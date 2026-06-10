@@ -17,17 +17,17 @@
                             200: '#b9ddbb',
                             300: '#88c48d',
                             400: '#56a65d',
-                            500: '#3a8c42',
-                            600: '#2d7034',
+                            500: '#3A6532',
+                            600: '#2d5229',
                             700: '#1f4f24',
                             800: '#173a1b',
                             900: '#0f2812',
                             950: '#071508',
                         },
                         gold: {
-                            400: '#d4a843',
-                            500: '#c49328',
-                            600: '#a87820',
+                            400: '#e0a060',
+                            500: '#D08A4E',
+                            600: '#b5733b',
                         }
                     },
                     fontFamily: {
@@ -45,7 +45,7 @@
     <style>
         body { font-family: 'DM Sans', sans-serif; }
         .sidebar-link { transition: all .2s ease; }
-        .sidebar-link:hover, .sidebar-link.active { background: rgba(255,255,255,.12); border-left: 3px solid #d4a843; }
+        .sidebar-link:hover, .sidebar-link.active { background: rgba(255,255,255,.12); border-left: 3px solid #D08A4E; }
         .sidebar-link.active { background: rgba(255,255,255,.15); }
         .card { background: white; border-radius: 16px; box-shadow: 0 2px 12px rgba(0,0,0,.06); }
         .stat-card { background: white; border-radius: 16px; border: 1px solid #f0f0f0; transition: transform .2s, box-shadow .2s; }
@@ -56,9 +56,11 @@
 
 <div class="flex h-screen overflow-hidden">
     <!-- Sidebar -->
-    <aside class="w-64 flex-shrink-0 flex flex-col" style="background: linear-gradient(180deg, #1f4f24 0%, #0f2812 100%);">
+    <aside class="w-64 flex-shrink-0 flex flex-col" style="background: linear-gradient(180deg, #3A6532 0%, #1a3d1e 100%);">
         <div class="p-6 border-b border-white/10">
-            <div class="font-display text-white text-2xl font-bold tracking-tight">kuai</div>
+            <div class="flex items-center gap-3">
+                <img src="{{ asset('assets/logo_kuai.png') }}" alt="KUAI Logo" class="h-8 w-auto">
+            </div>
             <div class="text-white/50 text-xs mt-1 font-body">Admin Panel</div>
         </div>
 

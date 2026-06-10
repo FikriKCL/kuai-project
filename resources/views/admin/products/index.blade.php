@@ -17,7 +17,7 @@
     </form>
     <a href="{{ route('admin.products.create') }}"
         class="flex items-center gap-2 text-white px-5 py-2.5 rounded-xl text-sm font-medium transition-all hover:opacity-90"
-        style="background: linear-gradient(135deg, #2d7034, #1f4f24);">
+        style="background: linear-gradient(135deg, #3A6532, #2d5229);">
         <i data-lucide="plus" class="w-4 h-4"></i> Tambah Produk
     </a>
 </div>

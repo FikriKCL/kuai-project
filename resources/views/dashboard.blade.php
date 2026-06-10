@@ -38,33 +38,18 @@
           </div>
           <div class="flex space-x-4 text-center justify-end">
             <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Product</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Journal</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">About</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Career</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Get
-              Started</a>
+            <a href="{{ url('/') }}"
+              class="rounded-md px-3 py-2 text-sm font-medium text-white bg-gray-950/50">Dashboard</a>
+            <a href="{{ route('home') }}"
+              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Layanan & Harga</a>
           </div>
         </div>
         <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
           <div class="space-y-1 px-2 pt-2 pb-3">
-            <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
-            <a href="#" aria-current="page"
+            <a href="{{ url('/') }}" aria-current="page"
               class="block rounded-md bg-gray-950/50 px-3 py-2 text-base font-medium text-white">Dashboard</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Journal</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">About</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Career</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Get
-              Started</a>
+            <a href="{{ route('home') }}"
+              class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/5 hover:text-white">Layanan & Harga</a>
           </div>
         </el-disclosure>
     </nav>
@@ -79,14 +64,10 @@
       <p class="mb-8 text-base font-normal text-body md:text-xl text-white">Menjaga dan merawat sepatu anda dengan
         ketulusan hati terdalam. <br>Dijamin bersih dan menjaga keawetan sepatumu</p>
       <div class="flex flex-col gap-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
-        <button type="button"
-          class="w-52 inline-flex items-center justify-center rounded-4xl bg-[#D08A4E] text-white bg-brand hover:bg-brand-strong box-  -transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none">
-          Layanan
-        </button>
-        <button type="button"
-          class="w-52 inline-flex items-center justify-center rounded-4xl bg-white text-[#3A6532] bg-brand hover:bg-brand-strong box-  -transparent focus:ring-4 focus:ring-[#D08A4E] focus:ring-brand-medium shadow-xs font-medium rounded-base text-base px-5 py-3 focus:outline-none">
-          Merchandise
-        </button>
+        <a href="{{ route('home') }}"
+          class="w-52 inline-flex items-center justify-center rounded-4xl bg-[#D08A4E] text-white hover:bg-[#b5733b] focus:ring-4 focus:ring-[#D08A4E]/40 shadow-xs font-medium text-base px-5 py-3 focus:outline-none transition duration-200">
+          Lihat Layanan
+        </a>
       </div>
     </div>
   </section>
@@ -166,9 +147,9 @@
     <div class="flex flex-col items-center w-full max-w-7xl">
         
         <h2 class="text-3xl font-bold text-gray-800 mb-3 tracking-tight">Layanan Kami</h2>
-        <button type="button" class="px-5 py-2 bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 mb-4 shadow-sm">
+        <a href="{{ route('home') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 mb-4 shadow-sm">
             Lihat daftar Menu
-        </button>
+        </a>
         
         <p class="text-center text-gray-500 text-sm max-w-xl leading-relaxed mb-8 font-sans font-light">
             Kami memberikan berbagai macam layanan untuk perawatan barang kesayangan anda yang akan dikerjakan oleh tim kami yang sudah berpengalaman dan professional.
@@ -360,9 +341,9 @@
 
         </div>
 
-        <button type="button" class="px-5 py-2 bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 shadow-sm mt-4">
+        <a href="{{ route('home') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 shadow-sm mt-4">
             Lihat daftar Menu
-        </button>
+        </a>
         
     </div>
 </section>
@@ -429,31 +410,19 @@
             </div>
           </div>
           <div class="flex space-x-4 text-center justify-end">
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Product</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Journal</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">About</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Career</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Get Started</a>
+            <a href="{{ url('/') }}"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Dashboard</a>
+            <a href="{{ route('home') }}"
+              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Layanan & Harga</a>
           </div>
         </div>
         
         <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
           <div class="space-y-1 px-2 pt-2 pb-3 bg-white">
-            <a href="#" aria-current="page"
+            <a href="{{ url('/') }}" aria-current="page"
               class="block rounded-md bg-gray-100 px-3 py-2 text-base font-medium text-gray-900">Dashboard</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Journal</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">About</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Career</a>
-            <a href="#"
-              class="rounded-md px-3 py-2 text-sm font-medium text-gray-800 hover:bg-gray-100">Get Started</a>
+            <a href="{{ route('home') }}"
+              class="block rounded-md px-3 py-2 text-base font-medium text-gray-800 hover:bg-gray-100">Layanan & Harga</a>
           </div>
         </el-disclosure>
     </nav>

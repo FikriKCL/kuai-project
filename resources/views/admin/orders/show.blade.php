@@ -102,7 +102,7 @@
                 </select>
                 <button type="submit"
                     class="w-full py-2.5 text-white rounded-xl text-sm font-medium transition-all hover:opacity-90"
-                    style="background: linear-gradient(135deg, #2d7034, #1f4f24);">
+                    style="background: linear-gradient(135deg, #3A6532, #2d5229);">
                     Simpan Status
                 </button>
             </form>

@@ -80,7 +80,7 @@
             <div class="flex items-center gap-3">
                 <button type="submit"
                     class="px-6 py-2.5 text-white rounded-xl text-sm font-medium transition-all hover:opacity-90"
-                    style="background: linear-gradient(135deg, #2d7034, #1f4f24);">
+                    style="background: linear-gradient(135deg, #3A6532, #2d5229);">
                     Simpan Produk
                 </button>
                 <a href="{{ route('admin.products.index') }}" class="px-6 py-2.5 border border-gray-200 rounded-xl text-sm text-gray-600 hover:bg-gray-50 transition-colors">

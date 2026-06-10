@@ -10,7 +10,7 @@
         <div class="flex items-center justify-between mb-3">
             <div class="text-gray-400 text-sm font-medium">Total Produk</div>
             <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:#e8f5e9">
-                <i data-lucide="package" class="w-5 h-5" style="color:#2d7034"></i>
+                <i data-lucide="package" class="w-5 h-5" style="color:#3A6532"></i>
             </div>
         </div>
         <div class="text-3xl font-bold text-gray-800">{{ $totalProducts }}</div>
@@ -36,7 +36,7 @@
         <div class="flex items-center justify-between mb-3">
             <div class="text-gray-400 text-sm font-medium">Total Pendapatan</div>
             <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background:#e8f5e9">
-                <i data-lucide="trending-up" class="w-5 h-5" style="color:#2d7034"></i>
+                <i data-lucide="trending-up" class="w-5 h-5" style="color:#3A6532"></i>
             </div>
         </div>
         <div class="text-2xl font-bold text-gray-800">Rp {{ number_format($totalRevenue, 0, ',', '.') }}</div>
@@ -101,7 +101,7 @@
             @foreach($topProducts as $i => $p)
             <div class="flex items-center gap-3">
                 <div class="w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold text-white flex-shrink-0"
-                    style="background: {{ ['#2d7034','#d4a843','#3b82f6','#ef4444','#8b5cf6'][$i] ?? '#9ca3af' }}">
+                    style="background: {{ ['#3A6532','#D08A4E','#3b82f6','#ef4444','#8b5cf6'][$i] ?? '#9ca3af' }}">
                     {{ $i + 1 }}
                 </div>
                 <div class="flex-1 min-w-0">
@@ -156,8 +156,8 @@ new Chart(document.getElementById('revenueChart'), {
         datasets: [{
             label: 'Pendapatan',
             data: monthData,
-            backgroundColor: 'rgba(45,112,52,0.15)',
-            borderColor: '#2d7034',
+            backgroundColor: 'rgba(58,101,50,0.15)',
+            borderColor: '#3A6532',
             borderWidth: 2,
             borderRadius: 8,
             borderSkipped: false,
