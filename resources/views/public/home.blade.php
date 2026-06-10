@@ -103,7 +103,7 @@
                 Kami memberikan berbagai macam layanan untuk perawatan barang kesayangan anda yang akan dikerjakan oleh tim kami yang sudah berpengalaman dan professional.
             </p>
 
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 w-full mb-8" id="productGrid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 w-full mb-8" id="productGrid">
 
                 @forelse($products as $product)
                 <div class="bg-[#3A6532] rounded-2xl p-3 flex flex-col justify-between border border-gray-100 shadow-sm overflow-hidden group cursor-pointer transition-transform duration-200 hover:-translate-y-1 hover:shadow-lg"
@@ -454,6 +454,20 @@
     document.getElementById('checkoutModal').addEventListener('click', function(e) {
         if (e.target === this) closeModal();
     });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuIconOpen = document.getElementById('menuIconOpen');
+    const menuIconClose = document.getElementById('menuIconClose');
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+    }
     </script>
 </body>
 
