@@ -8,7 +8,7 @@
 <div class="flex flex-wrap items-center gap-2 mb-5">
     <form action="" method="GET" class="flex items-center gap-2 flex-wrap">
         <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari nama / telp / ID..."
-            class="border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 w-56">
+            class="border border-gray-200 rounded-xl px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500 w-full sm:w-56">
         <select name="status" class="border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
             <option value="">Semua Status</option>
             <option value="pending"    {{ request('status') === 'pending'    ? 'selected' : '' }}>Pending</option>
