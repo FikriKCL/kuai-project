@@ -23,7 +23,7 @@
       <p class="mb-8 text-base font-normal text-body md:text-xl text-white">Menjaga dan merawat sepatu anda dengan
         ketulusan hati terdalam. <br>Dijamin bersih dan menjaga keawetan sepatumu</p>
       <div class="flex flex-col gap-4 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 md:space-x-4">
-        <a href="{{ route('home') }}"
+        <a href="{{ route('product') }}"
           class="w-52 inline-flex items-center justify-center rounded-4xl bg-[#D08A4E] text-white hover:bg-[#b5733b] focus:ring-4 focus:ring-[#D08A4E]/40 shadow-xs font-medium text-base px-5 py-3 focus:outline-none transition duration-200">
           Lihat Layanan
         </a>
@@ -106,7 +106,7 @@
     <div class="flex flex-col items-center w-full max-w-7xl">
         
         <h2 class="text-3xl font-bold text-gray-800 mb-3 tracking-tight">Layanan Kami</h2>
-        <a href="{{ route('home') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 mb-4 shadow-sm">
+        <a href="{{ route('product') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 mb-4 shadow-sm">
             Lihat daftar Menu
         </a>
         
@@ -300,7 +300,7 @@
 
         </div>
 
-        <a href="{{ route('home') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 shadow-sm mt-4">
+        <a href="{{ route('product') }}" class="px-5 py-2 inline-flex bg-[#D08A4E] hover:bg-[#b5733b] text-white text-sm font-medium rounded-full transition duration-200 shadow-sm mt-4">
             Lihat daftar Menu
         </a>
         

@@ -22,7 +22,7 @@
                     </div>
                     <div class="hidden sm:flex space-x-4 text-center justify-end">
                         <a href="{{ url('/') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Dashboard</a>
-                        <a href="#productSection" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Layanan & Harga</a>
+                        <a href="{{ url('/product') }}" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-white/5 hover:text-white">Layanan & Harga</a>
                     </div>
                 </div>
                 {{-- Mobile menu --}}

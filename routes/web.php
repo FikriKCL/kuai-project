@@ -15,7 +15,7 @@ Route::get('/', function () {
 
 
 // Public routes
-Route::get('/index', [HomeController::class, 'index'])->name('home');
+Route::get('/product', [HomeController::class, 'index'])->name('product');
 Route::post('/checkout', [HomeController::class, 'checkout'])->name('checkout');
 
 // Admin auth
@@ -29,7 +29,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
         // Products
-        Route::get('/products', [ProductController::class, 'index'])->name('products.index');
+        Route::get('/products', [ProductController::class, 'index'])->name('products.rp');
         Route::get('/products/create', [ProductController::class, 'create'])->name('products.create');
         Route::post('/products', [ProductController::class, 'store'])->name('products.store');
         Route::get('/products/{product}/edit', [ProductController::class, 'edit'])->name('products.edit');
