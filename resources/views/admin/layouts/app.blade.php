@@ -84,7 +84,7 @@
             <div class="pt-4 pb-2">
                 <div class="text-white/30 text-xs uppercase tracking-wider px-4 font-semibold">Lainnya</div>
             </div>
-            <a href="{{ route('home') }}" target="_blank" class="sidebar-link flex items-center gap-3 px-4 py-3 text-white/80 rounded-lg text-sm font-medium">
+            <a href="{{ route('product') }}" target="_blank" class="sidebar-link flex items-center gap-3 px-4 py-3 text-white/80 rounded-lg text-sm font-medium">
                 <i data-lucide="external-link" class="w-4 h-4"></i> Lihat Website
             </a>
         </nav>
