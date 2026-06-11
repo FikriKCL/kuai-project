@@ -54,9 +54,12 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-<div class="flex h-screen overflow-hidden">
+<div class="flex h-screen overflow-hidden relative">
+    <!-- Mobile Sidebar Overlay -->
+    <div id="sidebarOverlay" class="fixed inset-0 bg-black/50 z-40 hidden md:hidden transition-opacity opacity-0"></div>
+
     <!-- Sidebar -->
-    <aside class="w-64 flex-shrink-0 flex flex-col" style="background: linear-gradient(180deg, #3A6532 0%, #1a3d1e 100%);">
+    <aside id="sidebar" class="fixed md:static inset-y-0 left-0 z-50 w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out flex flex-col h-full" style="background: linear-gradient(180deg, #3A6532 0%, #1a3d1e 100%);">
         <div class="p-6 border-b border-white/10">
             <div class="flex items-center gap-3">
                 <img src="{{ asset('assets/logo_kuai.png') }}" alt="KUAI Logo" class="h-8 w-auto">
@@ -109,9 +112,14 @@
     <div class="flex-1 flex flex-col overflow-hidden">
         <!-- Top bar -->
         <header class="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-            <div>
-                <h1 class="font-display text-xl font-semibold text-gray-800">@yield('heading', 'Dashboard')</h1>
-                <div class="text-sm text-gray-400 mt-0.5">@yield('subheading', '')</div>
+            <div class="flex items-center gap-4">
+                <button id="mobileSidebarToggle" class="md:hidden text-gray-500 hover:text-gray-700">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+                <div>
+                    <h1 class="font-display text-xl font-semibold text-gray-800">@yield('heading', 'Dashboard')</h1>
+                    <div class="text-sm text-gray-400 mt-0.5">@yield('subheading', '')</div>
+                </div>
             </div>
             <div class="flex items-center gap-4">
                 <div class="text-sm text-gray-400">{{ now()->isoFormat('dddd, D MMMM Y') }}</div>
@@ -143,6 +151,38 @@
 
 <script>
     lucide.createIcons();
+
+    // Mobile Sidebar Toggle
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebarOverlay');
+    const mobileSidebarToggle = document.getElementById('mobileSidebarToggle');
+
+    function toggleSidebar() {
+        if (!sidebar) return;
+        const isOpen = sidebar.classList.contains('translate-x-0');
+        if (isOpen) {
+            sidebar.classList.remove('translate-x-0');
+            sidebar.classList.add('-translate-x-full');
+            sidebarOverlay.classList.remove('opacity-100');
+            sidebarOverlay.classList.add('opacity-0');
+            setTimeout(() => sidebarOverlay.classList.add('hidden'), 300);
+        } else {
+            sidebar.classList.remove('-translate-x-full');
+            sidebar.classList.add('translate-x-0');
+            sidebarOverlay.classList.remove('hidden');
+            setTimeout(() => {
+                sidebarOverlay.classList.remove('opacity-0');
+                sidebarOverlay.classList.add('opacity-100');
+            }, 10);
+        }
+    }
+
+    if (mobileSidebarToggle) {
+        mobileSidebarToggle.addEventListener('click', toggleSidebar);
+    }
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', toggleSidebar);
+    }
 </script>
 @stack('scripts')
 </body>
